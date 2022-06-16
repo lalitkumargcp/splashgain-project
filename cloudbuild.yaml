@@ -30,7 +30,7 @@ substitutions:
     
     #Repository Specific configuration. DevOps can change this settings
     _DEPLOYMENTNAME: nginx-deployment
-    _CONTAINERNAME: cont1    
+    _CONTAINERNAME: cont1
     _REPO_NAME: splashtest
     
     # Developers ONLY change
