@@ -26,7 +26,7 @@ steps:
 #   - '—-location=${_ZONE}'
 #   - '--cluster=${_GKE_CLUSTER}'
  
-Update the container image using kubectl set
+#Update the container image using kubectl set
 - name: 'gcr.io/cloud-builders/kubectl'
   entrypoint: 'kubectl'
    args:
