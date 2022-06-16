@@ -12,7 +12,7 @@ steps:
   args: ['push','gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}']
   
 #Update the container image using kubectl set
-- name: 'gcr.io/cloud-builders/kubectl'
+- name: 'gcr.io/cloud-builders/gke-deploy'
   entrypoint: 'kubectl'
   args:
   - 'set'
