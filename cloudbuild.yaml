@@ -6,14 +6,22 @@ steps:
 #Push the image  
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push','gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}']
-  
-- name: "gcr.io/cloud-builders/gke-deploy"
+- name: 'gcr.io/cloud-builders/kubectl'
+  id: Deploy
   args:
-  - run
-  - '—-filename=k.yaml'
-  - '—-image=gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}'
-  - '—-location=${_ZONE}'
-  - '--cluster=${_GKE_CLUSTER}'
+  - 'apply'
+  - '-f'
+  - 'k.yaml'
+  env:
+  - 'CLOUDSDK_COMPUTE_REGION=us-central1-c'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=cluster-1  
+# - name: "gcr.io/cloud-builders/gke-deploy"
+#   args:
+#   - run
+#   - '—-filename=k.yaml'
+#   - '—-image=gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}'
+#   - '—-location=${_ZONE}'
+#   - '--cluster=${_GKE_CLUSTER}'
  
 #Update the container image using kubectl set
 # - name: 'gcr.io/cloud-builders/kubectl'
