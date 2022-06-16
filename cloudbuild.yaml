@@ -34,7 +34,7 @@ substitutions:
     _REPO_NAME: splashtest
     
     # Developers ONLY change
-    _VERSION: v1.0
+    _VERSION: v1
     
 options:
     substitution_option: 'ALLOW_LOOSE'
