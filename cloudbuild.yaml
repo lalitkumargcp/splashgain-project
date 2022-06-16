@@ -34,7 +34,7 @@ substitutions:
     _REPO_NAME: cicd-service
     
     # Developers ONLY change
-    _VERSION: v2
+    _VERSION: latest
     
 options:
     substitution_option: 'ALLOW_LOOSE'
