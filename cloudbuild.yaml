@@ -10,7 +10,6 @@ steps:
 #Update the container image using kubectl set
 - name: 'gcr.io/cloud-builders/kubectl'
   entrypoint: 'kubectl'
-  KUBECONFIG: '/tmp/kubeconfig'
    args:
    - 'set'
    - 'image'
