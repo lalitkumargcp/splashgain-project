@@ -14,7 +14,7 @@ steps:
 #Update the container image using kubectl set
 - name: 'gcr.io/cloud-builders/kubectl'
   entrypoint: 'kubectl'
-  args:
+  args:[
   - 'set'
   - 'image'
   - 'deployment/${_DEPLOYMENTNAME}'
@@ -22,6 +22,7 @@ steps:
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=${_ZONE}'
   - 'CLOUDSDK_CONTAINER_CLUSTER=${_GKE_CLUSTER}'
+  ]
   
 substitutions:
     #GCP Specific configuration. Please DON'T change anything
