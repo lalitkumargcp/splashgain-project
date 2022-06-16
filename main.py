@@ -1,7 +1,11 @@
-var http = require('http');
-var handleRequest = function(request, response) {
-  response.writeHead(200);
-  response.end("<h1> Deployed Version is v1.0.</h1>");
-}
-var www = http.createServer(handleRequest);
-www.listen(8080);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP - Hello, World!</title>
+</head>
+<body>
+        <h1><?php echo 'Hello, World!'; ?></h1>
+</body>
+</html>
