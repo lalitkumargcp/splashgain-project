@@ -6,6 +6,6 @@
     <title>PHP - Hello, World! how are you ram </title>
 </head>
 <body>
-        <h1><?php echo 'lalit'; ?></h1>
+        <h1><?php echo 'prathvi'; ?></h1>
 </body>
 </html>
