@@ -10,10 +10,10 @@ steps:
 - name: "gcr.io/cloud-builders/gke-deploy"
   args:
   - run
-  - —-filename: 'k.yaml'
-  - —-image=gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}
-  - —-location=${_ZONE}
-  - --cluster=${_GKE_CLUSTER}
+  - '—-filename=k.yaml'
+  - '—-image=gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}'
+  - '—-location=${_ZONE}'
+  - '--cluster=${_GKE_CLUSTER}'
  
 #Update the container image using kubectl set
 # - name: 'gcr.io/cloud-builders/kubectl'
