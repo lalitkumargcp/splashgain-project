@@ -6,6 +6,10 @@ steps:
 #Push the image  
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push','gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}']
+  
+  
+  
+  
 - name: 'gcr.io/cloud-builders/kubectl'
   id: Deploy
   args:
